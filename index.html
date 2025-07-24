@@ -1,336 +1,615 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reiki - Apresentação Completa</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;500;600;700&display=swap');
 
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(135deg, rgba(0, 255, 191, 1) 0%, rgba(0, 255, 225, 1) 50%, rgba(0, 251, 255, 1) 100%);
-      color: #1a202c; /* cinza escuro para ótima legibilidade */
-    }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, rgba(0, 255, 191, 1) 0%, rgba(0, 255, 225, 1) 50%, rgba(0, 251, 255, 1) 100%);
+            color: #1a202c;
+            /* cinza escuro para ótima legibilidade */
+        }
 
-    .slide {
-      width: 90%;
-      max-width: 1200px;
-      min-height: 80vh;
-      margin: 2rem auto;
-      padding: 3rem;
-      box-sizing: border-box;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      background: rgba(255, 255, 255, 0.9); /* leve transparência */
-      border: 1px solid rgba(0, 0, 0, 0.05);
-      position: relative;
-    }
+        .slide {
+            width: 90%;
+            max-width: 1200px;
+            min-height: 80vh;
+            margin: 2rem auto;
+            padding: 3rem;
+            box-sizing: border-box;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.9);
+            /* leve transparência */
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
 
-    .cover {
-      background: linear-gradient(135deg, #83a4d4 0%, #b6fbff 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 4rem;
-      color: #fff;
-    }
+        .cover {
+            width: 90%;
+            /* em vez de width: 1200px */
+            max-width: 1200px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #83a4d4 0%, #b6fbff 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 4rem;
+            color: #fff;
+        }
 
-    .cover h1 {
-      font-size: 4.5rem;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
-      margin-bottom: 1.5rem;
-    }
+        .flexitemsCenter img {
+            padding: auto;
+        }
 
-    .cover h2 {
-      font-size: 2rem;
-      font-weight: 300;
-      letter-spacing: 1px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    }
+        .cover h1 {
+            font-size: 4.5rem;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+            margin-bottom: 1.5rem;
+        }
 
-    h1 {
-      font-family: 'Dancing Script', cursive;
-    }
+        .cover h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
 
-    .symbol {
-      width: 150px;
-      height: 150px;
-      margin: 30px auto;
-    }
+        h1 {
+            font-family: 'Dancing Script', cursive;
+        }
 
-    .history-card {
-      background: rgba(178, 235, 242, 0.2);
-      border-left: 4px solid #00bcd4;
-      padding: 20px;
-    }
+        .symbol {
+            width: 150px;
+            height: 150px;
+            margin: 30px auto;
+        }
 
-    .chakra {
-      width: 80px;
-      height: 80px;
-      margin: 0 auto;
-    }
+        .history-card {
+            background: rgba(178, 235, 242, 0.2);
+            border-left: 4px solid #00bcd4;
+            padding: 20px;
+        }
 
-    .technique-card {
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.92);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      overflow: hidden;
-      border: 1px solid rgba(0,0,0,0.05);
-    }
+        .chakra {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+        }
 
-    .technique-card:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-    }
+        .technique-card {
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.92);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
 
-    .technique-card h3 {
-      font-size: 1.25rem;
-      color: #2c5282;
-      margin-bottom: 1rem;
-      position: relative;
-      padding-bottom: 0.5rem;
-    }
+        .technique-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
 
-    .technique-card h3::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 25%;
-      width: 50%;
-      height: 2px;
-      background: linear-gradient(to right, transparent, #4299e1, transparent);
-    }
-  </style>
+        .technique-card h3 {
+            font-size: 1.25rem;
+            color: #2c5282;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .technique-card h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 25%;
+            width: 50%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #4299e1, transparent);
+        }
+
+        .slide cover {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .flex.itemsCenter {
+            width: 250px;
+            height: 200px;
+            overflow: visible;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        .flex.itemsCenter img {
+            width: 350px;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, rgba(0, 255, 191, 1) 0%, rgba(0, 255, 225, 1) 50%, rgba(0, 251, 255, 1) 100%);
+            color: #1a202c;
+        }
+
+        .slide {
+            width: 90%;
+            max-width: 1200px;
+            min-height: 80vh;
+            margin: 2rem auto;
+            padding: 3rem;
+            box-sizing: border-box;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        /* Capa */
+        .cover {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #83a4d4 0%, #b6fbff 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 4rem;
+            color: #fff;
+        }
+
+        .cover h1 {
+            font-size: 4.5rem;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+            margin-bottom: 1.5rem;
+        }
+
+        .cover h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .symbol {
+            width: 150px;
+            height: 150px;
+            margin: 30px auto;
+        }
+
+        .history-card {
+            background: rgba(178, 235, 242, 0.2);
+            border-left: 4px solid #00bcd4;
+            padding: 20px;
+        }
+
+        .chakra {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+        }
+
+        .technique-card {
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.92);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .technique-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .technique-card h3 {
+            font-size: 1.25rem;
+            color: #2c5282;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .technique-card h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 25%;
+            width: 50%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #4299e1, transparent);
+        }
+
+        /* Flex com itens centralizados */
+        .flex.itemsCenter {
+            width: 200px;
+            height: 150px;
+            overflow: visible;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        .flex.itemsCenter img {
+            width: 300px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* Grid padrão para slides com 2 ou 5 colunas */
+        .grid.grid-cols-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .grid.grid-cols-5 {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+        }
+
+
+        /* Responsividade */
+        @media (max-width: 1024px) {
+            .cover h1 {
+                font-size: 3.5rem;
+            }
+
+            .cover h2 {
+                font-size: 1.5rem;
+            }
+
+            .slide {
+                padding: 2rem;
+            }
+
+            .grid.grid-cols-5 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cover h1 {
+                font-size: 2.8rem;
+            }
+
+            .cover h2 {
+                font-size: 1.2rem;
+            }
+
+            .symbol {
+                width: 120px;
+                height: 120px;
+            }
+
+            .slide {
+                width: 95%;
+                padding: 1.5rem;
+                min-height: auto;
+                margin: 1rem auto;
+            }
+
+            .grid.grid-cols-2 {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .grid.grid-cols-5 {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .technique-card {
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            }
+
+            .technique-card:hover {
+                transform: none;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            }
+
+            .flex.itemsCenter {
+                width: 100%;
+                height: auto;
+                border: none;
+            }
+
+            .flex.itemsCenter img {
+                position: static;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cover h1 {
+                font-size: 2rem;
+            }
+
+            .cover h2 {
+                font-size: 1rem;
+            }
+
+            .symbol {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<!-- Capa -->
-<div class="slide cover">
-    <div class="symbol">
-        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7e335343-3899-4d84-b00f-59bacde02459.png" alt="Símbolo Kanji do Reiki" class="rounded-full border-4 border-white shadow-lg">
+    <!-- Capa -->
+    <div class="slide cover">
+        <div class="symbol">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7e335343-3899-4d84-b00f-59bacde02459.png"
+                alt="Símbolo Kanji do Reiki" class="rounded-full border-4 border-white shadow-lg">
+        </div>
+        <h1 class="text-6xl font-bold text-cyan-700 mb-4">Reiki</h1>
+        <h2 class="text-3xl text-cyan-600 mb-8">A Arte da Cura Energética</h2>
+        <p class="text-xl text-gray-600">Uma jornada através da energia universal</p>
+        <div class="mt-16 text-sm text-gray-500">
+            <p>Daniel, John, Rafael, Issac, Gabriel</p>
+            <p>desenvolvido por: John e Daniel</p>
+        </div>
     </div>
-    <h1 class="text-6xl font-bold text-cyan-700 mb-4">Reiki</h1>
-    <h2 class="text-3xl text-cyan-600 mb-8">A Arte da Cura Energética</h2>
-    <p class="text-xl text-gray-600">Uma jornada através da energia universal</p>
-    <div class="mt-16 text-sm text-gray-500">
-        <p>Daniel, John, Rafael, Issac, Gabriel</p>
-        <p>desenvolvido por: John e Daniel</p>
-    </div>
-</div>
 
-<!-- Introdução -->
-<div class="slide">
-    <h2 class="text-4xl font-bold mb-8 pb-4 relative">
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-400">O Que é Reiki?</span>
-        <div class="absolute bottom-0 left-0 w-20 h-1 bg-gradient-to-r from-blue-400 to-teal-300 rounded-full"></div>
-    </h2>
-    
-    <div class="grid grid-cols-2 gap-8">
-        <div>
-            <p class="text-lg mb-4 leading-relaxed">
-                Reiki (霊気) é uma técnica japonesa de redução do estresse e relaxamento que também promove a cura. Foi desenvolvida em 1922 por <strong class="text-cyan-600">Mikao Usui</strong>, um professor e monge budista japonês.
-            </p>
-            
-            <div class="history-card mb-6">
-                <h3 class="text-xl font-semibold text-cyan-700 mb-2">Etimologia</h3>
-                <p>Rei (霊) = Sabedoria Universal/Espírito</p>
-                <p>Ki (気) = Energia Vital</p>
+    <!-- Introdução -->
+    <div class="slide">
+        <h2 class="text-4xl font-bold mb-8 pb-4 relative">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-400">O Que é Reiki?</span>
+            <div class="absolute bottom-0 left-0 w-20 h-1 bg-gradient-to-r from-blue-400 to-teal-300 rounded-full">
             </div>
-            
-            <p class="text-gray-700">
-                O Reiki é baseado na crença de que uma "energia vital" invisível flui através de nós e é o que nos faz estar vivos.
-            </p>
-        </div>
-        
-        <div class="flex items-center">
-            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/85aaaf5d-b839-4f08-9293-c6736d950b78.png" alt="Representação dos cinco símbolos tradicionais do Reiki" class="rounded-lg shadow-md">
-        </div>
-    </div>
-    
-    <div class="flex justify-end mt-6 text-xs text-gray-400">
-        1
-    </div>
-</div>
+        </h2>
 
-<!-- História -->
-<div class="slide" style="background: #00ffbf; background: linear-gradient(135deg, rgba(0, 255, 191, 1) 0%, rgba(0, 255, 225, 1) 50%, rgba(0, 251, 255, 1) 100%);">
-    <h2 class="text-3xl font-bold text-cyan-700 mb-6 border-b-2 border-cyan-200 pb-2">História do Reiki</h2>
-    
-    <div class="grid grid-cols-2 gap-8 mb-8">
-        <div>
-            <h3 class="text-xl font-semibold text-cyan-700 mb-3">Origem</h3>
-            <p class="mb-4">
-                O Reiki moderno originou-se no Japão em 1922 quando Mikao Usui teve uma revelação espiritual durante um retiro de 21 dias no Monte Kurama.
+        <div class="grid grid-cols-2 gap-8">
+            <div>
+                <p class="text-lg mb-4 leading-relaxed">
+                    Reiki (霊気) é uma técnica japonesa de redução do estresse e relaxamento que também promove a cura.
+                    Foi desenvolvida em 1922 por <strong class="text-cyan-600">Mikao Usui</strong>, um professor e monge
+                    budista japonês.
+                </p>
+
+                <div class="history-card mb-6">
+                    <h3 class="text-xl font-semibold text-cyan-700 mb-2">Etimologia</h3>
+                    <p>Rei (霊) = Sabedoria Universal/Espírito</p>
+                    <p>Ki (気) = Energia Vital</p>
+                </div>
+
+                <p class="text-gray-700">
+                    O Reiki é baseado na crença de que uma "energia vital" invisível flui através de nós e é o que nos
+                    faz estar vivos.
+                </p>
+            </div>
+
+            <div class="flexitemsCenter">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/85aaaf5d-b839-4f08-9293-c6736d950b78.png"
+                    alt="Representação dos cinco símbolos tradicionais do Reiki" class="rounded-lg shadow-md">
+            </div>
+        </div>
+
+        <div class="flex justify-end mt-6 text-xs text-gray-400">
+            1
+        </div>
+    </div>
+
+    <!-- História -->
+    <div class="slide"
+        style="background: #00ffbf; background: linear-gradient(135deg, rgba(0, 255, 191, 1) 0%, rgba(0, 255, 225, 1) 50%, rgba(0, 251, 255, 1) 100%);">
+        <h2 class="text-3xl font-bold text-cyan-700 mb-6 border-b-2 border-cyan-200 pb-2">História do Reiki</h2>
+
+        <div class="grid grid-cols-2 gap-8 mb-8">
+            <div>
+                <h3 class="text-xl font-semibold text-cyan-700 mb-3">Origem</h3>
+                <p class="mb-4">
+                    O Reiki moderno originou-se no Japão em 1922 quando Mikao Usui teve uma revelação espiritual durante
+                    um retiro de 21 dias no Monte Kurama.
+                </p>
+
+                <div class="bg-gray-100 p-4 rounded-lg mb-4">
+                    <p class="font-medium">Principais Marcos:</p>
+                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                        <li>1922: Fundação do Usui Reiki Ryoho</li>
+                        <li>1926: Morte de Usui</li>
+                        <li>1938: Introdução ao Ocidente</li>
+                        <li>Anos 80: Expansão global</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/308e6ce4-7bb6-4d7b-a82c-709692650904.png"
+                    alt="Vista do Monte Kurama no Japão, local onde Mikao Usui desenvolveu o Reiki"
+                    class="rounded-lg shadow-md">
+            </div>
+        </div>
+
+        <h3 class="text-xl font-semibold text-cyan-700 mb-3">Linha do Tempo</h3>
+        <div class="relative">
+            <div class="flex justify-between items-end mb-2">
+                <div class="flex flex-col items-center w-1/4">
+                    <div class="w-5 h-5 bg-blue-500 rounded-full transform -translate-y-2"></div>
+                    <span class="text-sm font-medium text-gray-700">1922</span>
+                </div>
+                <div class="flex flex-col items-center w-1/4">
+                    <div class="w-5 h-5 bg-teal-500 rounded-full transform -translate-y-2"></div>
+                    <span class="text-sm font-medium text-gray-700">1940</span>
+                </div>
+                <div class="flex flex-col items-center w-1/4">
+                    <div class="w-5 h-5 bg-indigo-500 rounded-full transform -translate-y-2"></div>
+                    <span class="text-sm font-medium text-gray-700">1980</span>
+                </div>
+                <div class="flex flex-col items-center w-1/4">
+                    <div class="w-5 h-5 bg-purple-500 rounded-full transform -translate-y-2"></div>
+                    <span class="text-sm font-medium text-gray-700">Atual</span>
+                </div>
+            </div>
+            <div class="relative h-2 bg-gradient-to-r from-blue-500 via-teal-500 to-purple-500 rounded-full mb-8"></div>
+        </div>
+
+        <div class="flex justify-end text-xs text-gray-400">
+            2
+        </div>
+    </div>
+
+    <!-- Princípios -->
+    <div class="slide">
+        <h2 class="text-3xl font-bold text-cyan-700 mb-6 border-b-2 border-cyan-200 pb-2">Os Cinco Princípios do Reiki
+        </h2>
+
+        <div class="grid grid-cols-5 gap-4 mb-8">
+            <div class="technique-card bg-white p-4 text-center">
+                <div class="chakra mb-3">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/33629b57-c16b-43de-872e-2d10fea0530c.png"
+                        alt="Símbolo do Primeiro Princípio" class="rounded-full">
+                </div>
+                <h3 class="font-semibold text-cyan-700 mb-2">Kyo Dake Wa</h3>
+                <p class="text-sm">Só por hoje, não se irrite</p>
+            </div>
+
+            <!-- Repetir para os outros 4 princípios -->
+            <div class="technique-card bg-white p-4 text-center">
+                <div class="chakra mb-3">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8ceef072-9f5f-4776-93da-eb0d3ddf8039.png"
+                        alt="Símbolo do Segundo Princípio" class="rounded-full">
+                </div>
+                <h3 class="font-semibold text-cyan-700 mb-2">Kyo Dake Wa</h3>
+                <p class="text-sm">Só por hoje, não se preocupe</p>
+            </div>
+
+            <div class="technique-card bg-white p-4 text-center">
+                <div class="chakra mb-3">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c0b3beb4-36ac-4ef1-befa-ad299c80eb7e.png"
+                        alt="Símbolo do Terceiro Princípio" class="rounded-full">
+                </div>
+                <h3 class="font-semibold text-cyan-700 mb-2">Kyo Dake Wa</h3>
+                <p class="text-sm">Só por hoje, seja grato</p>
+            </div>
+
+            <div class="technique-card bg-white p-4 text-center">
+                <div class="chakra mb-3">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/17aa8b56-6a72-47eb-a014-45e72819aa50.png"
+                        alt="Símbolo do Quarto Princípio" class="rounded-full">
+                </div>
+                <h3 class="font-semibold text-cyan-700 mb-2">Kyo Dake Wa</h3>
+                <p class="text-sm">Só por hoje, trabalhe com afinco</p>
+            </div>
+
+            <div class="technique-card bg-white p-4 text-center">
+                <div class="chakra mb-3">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/05cdfe32-8655-4a88-872d-7073acc8adab.png"
+                        alt="Símbolo do Quinto Princípio" class="rounded-full">
+                </div>
+                <h3 class="font-semibold text-cyan-700 mb-2">Kyo Dake Wa</h3>
+                <p class="text-sm">Só por hoje, seja bondoso</p>
+            </div>
+        </div>
+
+        <div class="bg-cyan-50 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold text-cyan-700 mb-3">Significado Profundo</h3>
+            <p class="mb-3">
+                Estes princípios constituem a filosofia de vida proposta pelo Reiki. Eles servem como guias para uma
+                existência mais equilibrada e harmoniosa.
             </p>
-            
-            <div class="bg-gray-100 p-4 rounded-lg mb-4">
-                <p class="font-medium">Principais Marcos:</p>
-                <ul class="list-disc pl-5 mt-2 space-y-1">
-                    <li>1922: Fundação do Usui Reiki Ryoho</li>
-                    <li>1926: Morte de Usui</li>
-                    <li>1938: Introdução ao Ocidente</li>
-                    <li>Anos 80: Expansão global</li>
+            <p class="text-sm text-gray-600 italic">
+                "O Reiki é o amor universal. Ele cura com energia que flui através de nossas mãos quando tocamos alguém
+                com a intenção de ajudar." - Hawayo Takata
+            </p>
+        </div>
+
+        <div class="flex justify-end mt-6 text-xs text-gray-400">
+            3
+        </div>
+    </div>
+
+    <!-- Benefícios -->
+    <div class="slide">
+        <h2 class="text-3xl font-bold text-cyan-700 mb-6 border-b-2 border-cyan-200 pb-2">Benefícios do Reiki</h2>
+
+        <div class="grid grid-cols-2 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-teal-400">
+                <h3 class="text-xl font-semibold text-teal-700 mb-3">Físicos</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Alívio de dores e tensões musculares</li>
+                    <li>Fortalecimento do sistema imunológico</li>
+                    <li>Recuperação mais rápida de lesões</li>
+                    <li>Melhora na qualidade do sono</li>
+                    <li>Redução de sintomas de doenças</li>
                 </ul>
             </div>
-        </div>
-        
-        <div>
-            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/308e6ce4-7bb6-4d7b-a82c-709692650904.png" alt="Vista do Monte Kurama no Japão, local onde Mikao Usui desenvolveu o Reiki" class="rounded-lg shadow-md">
-        </div>
-    </div>
-    
-    <h3 class="text-xl font-semibold text-cyan-700 mb-3">Linha do Tempo</h3>
-    <div class="relative">
-        <div class="flex justify-between items-end mb-2">
-            <div class="flex flex-col items-center w-1/4">
-                <div class="w-5 h-5 bg-blue-500 rounded-full transform -translate-y-2"></div>
-                <span class="text-sm font-medium text-gray-700">1922</span>
-            </div>
-            <div class="flex flex-col items-center w-1/4">
-                <div class="w-5 h-5 bg-teal-500 rounded-full transform -translate-y-2"></div>
-                <span class="text-sm font-medium text-gray-700">1940</span>
-            </div>
-            <div class="flex flex-col items-center w-1/4">
-                <div class="w-5 h-5 bg-indigo-500 rounded-full transform -translate-y-2"></div>
-                <span class="text-sm font-medium text-gray-700">1980</span>
-            </div>
-            <div class="flex flex-col items-center w-1/4">
-                <div class="w-5 h-5 bg-purple-500 rounded-full transform -translate-y-2"></div>
-                <span class="text-sm font-medium text-gray-700">Atual</span>
-            </div>
-        </div>
-        <div class="relative h-2 bg-gradient-to-r from-blue-500 via-teal-500 to-purple-500 rounded-full mb-8"></div>
-    </div>
-    
-    <div class="flex justify-end text-xs text-gray-400">
-        2
-    </div>
-</div>
 
-<!-- Princípios -->
-<div class="slide">
-    <h2 class="text-3xl font-bold text-cyan-700 mb-6 border-b-2 border-cyan-200 pb-2">Os Cinco Princípios do Reiki</h2>
-    
-    <div class="grid grid-cols-5 gap-4 mb-8">
-        <div class="technique-card bg-white p-4 text-center">
-            <div class="chakra mb-3">
-                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/33629b57-c16b-43de-872e-2d10fea0530c.png" alt="Símbolo do Primeiro Princípio" class="rounded-full">
+            <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-purple-400">
+                <h3 class="text-xl font-semibold text-purple-700 mb-3">Emocionais</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Redução do estresse e ansiedade</li>
+                    <li>Equilíbrio emocional</li>
+                    <li>Liberação de traumas e padrões negativos</li>
+                    <li>Aumento da autoestima e confiança</li>
+                    <li>Clareza mental e emocional</li>
+                </ul>
             </div>
-            <h3 class="font-semibold text-cyan-700 mb-2">Kyo Dake Wa</h3>
-            <p class="text-sm">Só por hoje, não se irrite</p>
-        </div>
-        
-        <!-- Repetir para os outros 4 princípios -->
-        <div class="technique-card bg-white p-4 text-center">
-            <div class="chakra mb-3">
-                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8ceef072-9f5f-4776-93da-eb0d3ddf8039.png" alt="Símbolo do Segundo Princípio" class="rounded-full">
-            </div>
-            <h3 class="font-semibold text-cyan-700 mb-2">Kyo Dake Wa</h3>
-            <p class="text-sm">Só por hoje, não se preocupe</p>
-        </div>
-        
-        <div class="technique-card bg-white p-4 text-center">
-            <div class="chakra mb-3">
-                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c0b3beb4-36ac-4ef1-befa-ad299c80eb7e.png" alt="Símbolo do Terceiro Princípio" class="rounded-full">
-            </div>
-            <h3 class="font-semibold text-cyan-700 mb-2">Kyo Dake Wa</h3>
-            <p class="text-sm">Só por hoje, seja grato</p>
-        </div>
-        
-        <div class="technique-card bg-white p-4 text-center">
-            <div class="chakra mb-3">
-                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/17aa8b56-6a72-47eb-a014-45e72819aa50.png" alt="Símbolo do Quarto Princípio" class="rounded-full">
-            </div>
-            <h3 class="font-semibold text-cyan-700 mb-2">Kyo Dake Wa</h3>
-            <p class="text-sm">Só por hoje, trabalhe com afinco</p>
-        </div>
-        
-        <div class="technique-card bg-white p-4 text-center">
-            <div class="chakra mb-3">
-                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/05cdfe32-8655-4a88-872d-7073acc8adab.png" alt="Símbolo do Quinto Princípio" class="rounded-full">
-            </div>
-            <h3 class="font-semibold text-cyan-700 mb-2">Kyo Dake Wa</h3>
-            <p class="text-sm">Só por hoje, seja bondoso</p>
-        </div>
-    </div>
-    
-    <div class="bg-cyan-50 p-6 rounded-lg">
-        <h3 class="text-xl font-semibold text-cyan-700 mb-3">Significado Profundo</h3>
-        <p class="mb-3">
-            Estes princípios constituem a filosofia de vida proposta pelo Reiki. Eles servem como guias para uma existência mais equilibrada e harmoniosa.
-        </p>
-        <p class="text-sm text-gray-600 italic">
-            "O Reiki é o amor universal. Ele cura com energia que flui através de nossas mãos quando tocamos alguém com a intenção de ajudar." - Hawayo Takata
-        </p>
-    </div>
-    
-    <div class="flex justify-end mt-6 text-xs text-gray-400">
-        3
-    </div>
-</div>
 
-<!-- Benefícios -->
-<div class="slide">
-    <h2 class="text-3xl font-bold text-cyan-700 mb-6 border-b-2 border-cyan-200 pb-2">Benefícios do Reiki</h2>
-    
-    <div class="grid grid-cols-2 gap-6 mb-8">
-        <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-teal-400">
-            <h3 class="text-xl font-semibold text-teal-700 mb-3">Físicos</h3>
-            <ul class="list-disc pl-5 space-y-2">
-                <li>Alívio de dores e tensões musculares</li>
-                <li>Fortalecimento do sistema imunológico</li>
-                <li>Recuperação mais rápida de lesões</li>
-                <li>Melhora na qualidade do sono</li>
-                <li>Redução de sintomas de doenças</li>
-            </ul>
-        </div>
-        
-        <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-purple-400">
-            <h3 class="text-xl font-semibold text-purple-700 mb-3">Emocionais</h3>
-            <ul class="list-disc pl-5 space-y-2">
-                <li>Redução do estresse e ansiedade</li>
-                <li>Equilíbrio emocional</li>
-                <li>Liberação de traumas e padrões negativos</li>
-                <li>Aumento da autoestima e confiança</li>
-                <li>Clareza mental e emocional</li>
-            </ul>
-        </div>
-        
-        <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-indigo-400">
-            <h3 class="text-xl font-semibold text-indigo-700 mb-3">Espirituais</h3>
-            <ul class="list-disc pl-5 space-y-2">
-                <li>Expansão da consciência</li>
-                <li>Conexão com o divino</li>
-                <li>Desenvolvimento intuitivo</li>
-                <li>Harmonização dos chakras</li>
-                <li>Caminho para autodescoberta</li>
-            </ul>
-        </div>
-        
-        <div class="flex items-center">
-            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7b7b95a0-eae9-4a46-b2d4-c75674988509.png" alt="Diagrama dos sete principais chakras do corpo humano" class="rounded-lg shadow-md">
-        </div>
-    </div>
-    
-    <div class="bg-gray-50 p-4 rounded-lg">
-        <p class="font-medium text-gray-700">
-            Observação: O Reiki não substitui tratamentos médicos convencionais, mas pode ser um excelente complemento terapêutico.
-        </p>
-    </div>
-    
-    <div class="flex justify-end mt-6 text-xs text-gray-400">
-        4
-    </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-indigo-400">
+                <h3 class="text-xl font-semibold text-indigo-700 mb-3">Espirituais</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Expansão da consciência</li>
+                    <li>Conexão com o divino</li>
+                    <li>Desenvolvimento intuitivo</li>
+                    <li>Harmonização dos chakras</li>
+                    <li>Caminho para autodescoberta</li>
+                </ul>
+            </div>
 
+            <div class="flex items-center">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7b7b95a0-eae9-4a46-b2d4-c75674988509.png"
+                    alt="Diagrama dos sete principais chakras do corpo humano" class="rounded-lg shadow-md">
+            </div>
+        </div>
+
+        <div class="bg-gray-50 p-4 rounded-lg">
+            <p class="font-medium text-gray-700">
+                Observação: O Reiki não substitui tratamentos médicos convencionais, mas pode ser um excelente
+                complemento terapêutico.
+            </p>
+        </div>
+
+        <div class="flex justify-end mt-6 text-xs text-gray-400">
+            4
+        </div>
